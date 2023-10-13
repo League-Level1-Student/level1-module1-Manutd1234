@@ -11,7 +11,7 @@ package _03_cat;
         * 1. Make the Cat meow
 		
 		* 2. Get the Cat to print it's name
-
+		
 		* 3. Kill the Cat! 
 		
 		*/
@@ -27,7 +27,7 @@ public class Cat {
 	}
 
 	void meow() {
-		System.out.println("meeeeeooooooooooowwwwwwwww!!");
+		System.out.println("meoooooooooooooooooooooooooow");
 	}
 
 	public void printName() {

@@ -11,12 +11,9 @@ public class RaceCar {
 	private int positionInRace;
 	public boolean damaged = false;
 	
-	/**
-	 * 
-	 * @param brand Brand of race car
-	 * @param positionInRace Position of race car in the race
+	/*@param brand Brand of the RaceCar
 	 */
-	public RaceCar(String brand, int positionInRace) {
+	public RaceCar() {
 		System.out.println("Your " +brand +" race car has been created.");
 		if (positionInRace <= 0)
 			throw new IllegalArgumentException("The car's position cannot be negative.");
@@ -29,6 +26,7 @@ public class RaceCar {
 	
 	public int getPositionInRace() {
 		return this.positionInRace;
+		
 	}
 	
 	public String getBrand() {
