@@ -4,9 +4,13 @@ import javax.swing.JOptionPane;
 
 public class PopcornRunner {
 public static void main(String[] args) {
-	Popcorn corn = new Popcorn("butter");
-	corn.applyHeat();
-	String yummypopcorn = JOptionPane.showInputDialog("How long should I cook the popcorn for?");
-	corn.eat();
+	String flavor= JOptionPane.showInputDialog("What flavor should the popcorn be");
+	Popcorn corn = new Popcorn(flavor);
+	Microwave wave = new Microwave();
+	String time = JOptionPane.showInputDialog("How long should I cook the popcorn for?");
+	int time1 = Integer.parseInt(time);
+	wave.setTime(time1);
+	wave.putInMicrowave(corn);
+	wave.startMicrowave();
 }
 }
