@@ -11,7 +11,8 @@ public class TurfWar extends PApplet {
          * 1. Create a constructor for Player that takes all these variables in
          * as parameters and initializes them using the this keyword.
          */
-        int x;
+       Player play = new Player();
+    	int x;
         int y;
         int speed;
         int playerSize;
@@ -37,6 +38,7 @@ public class TurfWar extends PApplet {
              * coordinates and size.
              */
             
+        
         }
 
         void update() {
@@ -108,7 +110,7 @@ public class TurfWar extends PApplet {
      * 4. Declare two variables of the Player class called player1 and player2.
      * Do not initialize them yet.
      */
-
+    
     
 
     // Do not change these variables
@@ -130,6 +132,7 @@ public class TurfWar extends PApplet {
     public void settings() {
         // 5. Set the size for your sketch. Make it at least 300x300.
        
+    	size(300,300);
     }
 
     @Override
@@ -141,10 +144,10 @@ public class TurfWar extends PApplet {
         ((java.awt.Canvas) surface.getNative()).requestFocus();
 
         // 6. Set the background color.
-
+background(50,50,50);
 
         // 7. Call the noStroke Method.
-        
+        noStroke();
         
         /*
          * 8. Initialize the two Player objects. For one use UP, LEFT, DOWN,
@@ -228,16 +231,17 @@ public class TurfWar extends PApplet {
     @Override
     public void draw() {
         // 10. Call the drawPlayer method for both players.
-        
+        //play.drawPlayer();
         // 11. Call the update method for both players.
-
+        //play.update();
         // 12. Call the isGameOver method.
-        
+        //play.isGameOver();
         // 13. Call the displayStats method.
-
+        //play.displayStats();
         // 14. If gameOver is true call the endGame method.
-
-    }
+        //if(gameOver) {
+        	//play.endgame();
+        }
 
     @Override
     public void keyPressed() {
