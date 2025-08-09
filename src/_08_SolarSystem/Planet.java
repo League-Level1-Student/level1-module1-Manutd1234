@@ -14,12 +14,14 @@ public class Planet {
     int avgDistFromSun;
     int orbitalPeriod;
     int diameter;
+    //ArrayList moon;
 
     Planet(Color planetColor, int distanceFromSun, int orbitalPeriod, int diameter){
     	this.planetColor = planetColor;
     	this.avgDistFromSun = distanceFromSun;
     	this.orbitalPeriod = orbitalPeriod;
     	this.diameter = diameter;
+    	//this. moon = moon;
     }
     
 

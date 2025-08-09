@@ -21,15 +21,17 @@ public class TurfWar extends PApplet {
         int leftKey;
         int downKey;
         int rightKey;
-
+public Player() {
+	
+}
         /*
          * The member variables below do not need to be initialized in the
          * constructor.
          */
-        boolean moveUp = false;
-        boolean moveDown = false;
-        boolean moveLeft = false;
-        boolean moveRight = false;
+        boolean moveUp = true;
+        boolean moveDown = true;
+        boolean moveLeft = true;
+        boolean moveRight = true;
         int pixelCount = 0;
 
         void drawPlayer() {
@@ -60,7 +62,7 @@ public class TurfWar extends PApplet {
              * Note: You do not need to use the statsBoardLine for the 
              * other directions.
              */
-            
+           
         }
 
         // You do not need to change any other Player methods.

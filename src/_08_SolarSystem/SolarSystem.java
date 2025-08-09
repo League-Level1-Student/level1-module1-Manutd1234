@@ -66,7 +66,7 @@ public class SolarSystem implements GameControlScene {
     Long startTimeMs = null;
     Game gameFrame = new Game("Solar System");
     //Color planetColor, int distanceFromSun, int orbitalPeriod, int diameter
-    Planet mercury = new Planet(new Color(82, 41, 21), 57, 225, 4);
+    Planet mercury = new Planet(new Color(82, 41, 21), 57, 225, 4  );
     Planet earth = new Planet(Color.blue,149, 365, 12);
     Planet mars = new Planet(Color.red, 227, 687, 6);
     Planet jupiter = new Planet(Color.white, 300, 4331, 142);

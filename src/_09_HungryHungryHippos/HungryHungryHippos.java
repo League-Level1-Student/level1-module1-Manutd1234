@@ -56,6 +56,7 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
     Color boardColor = new Color(138, 198, 193);
     Game gameFrame = new Game("Hungry Hungry Hippos");
     boolean startGame = false;
+    
 
     /*
      * Create your hippo objects here. The "left" input parameter indicates
