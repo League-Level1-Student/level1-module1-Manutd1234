@@ -3,6 +3,7 @@ package _09_HungryHungryHippos;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
+import java.util.Date;
 import java.util.Random;
 
 public class Melon {
@@ -11,7 +12,7 @@ public class Melon {
     int x, y, speed;
     double xSpeed, ySpeed, angle;
     Rectangle collisionBox;
-    
+    static Random random = new Random(new Date().getTime());
     boolean insideBoard = true;
 
     public Melon(int x, int y) {
@@ -22,10 +23,9 @@ public class Melon {
         this.y = y - RADIUS;
         
         speed = new Random().nextInt(10) + 5;
-        angle = Math.toRadians(new Random().nextDouble() * 360);
+        angle = Math.toRadians(random.nextDouble() * 360);
         xSpeed = Math.sin(angle) * speed;
         ySpeed = -Math.cos(angle) * speed;
-        
         collisionBox = new Rectangle(x - RADIUS, y - RADIUS, DIAMETER, DIAMETER);
     }
 

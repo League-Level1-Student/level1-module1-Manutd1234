@@ -55,15 +55,17 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
     Color bgColor = new Color(100, 150, 50);
     Color boardColor = new Color(138, 198, 193);
     Game gameFrame = new Game("Hungry Hungry Hippos");
-    boolean startGame = false;
+    boolean startGame = true;
     
 
     /*
      * Create your hippo objects here. The "left" input parameter indicates
      * which side the hippo is drawn.
      */
-    Hippo myHippoObject = new Hippo("left");
-
+    Hippo myHippoObject = new Hippo("left", new Color(220, 67, 240), "Lizzie") ;
+    Hippo myHippoObject1 = new Hippo("up", Color.orange, "Henry") ;
+    Hippo myHippoObject2 = new Hippo("down", Color.green, "Homer") ;
+    Hippo myHippoObject3 = new Hippo("right", Color.yellow, "Harry") ;
     public HungryHungryHippos() {
         gameFrame.setScene(this);
         gameFrame.start();
@@ -97,8 +99,11 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
         /*
          * Draw all the hippos here
          */
-        myHippoObject.draw(g);
         
+        myHippoObject.draw(g);
+        myHippoObject1.draw(g);
+        myHippoObject2.draw(g);
+        myHippoObject3.draw(g);
         if (startGame) {
             /*
              * Move all the melons
@@ -111,6 +116,9 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
              * this for all of your hippos!
              */
             checkHippoEating(myHippoObject);
+            checkHippoEating(myHippoObject1);
+            checkHippoEating(myHippoObject2);
+            checkHippoEating(myHippoObject3);
         }
     }
 
@@ -123,14 +131,14 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
          */
         if (keyCode == KeyEvent.VK_S) {
             startGame = true;
-        } else if (keyCode == KeyEvent.VK_1) {
+        } else if (keyCode == KeyEvent.VK_Q) {
             myHippoObject.eat();
-        } else if (keyCode == KeyEvent.VK_2) {
-            
-        } else if (keyCode == KeyEvent.VK_3) {
-            
-        } else if (keyCode == KeyEvent.VK_4) {
-            
+        } else if (keyCode == KeyEvent.VK_Z) {
+        	myHippoObject1.eat();
+        } else if (keyCode == KeyEvent.VK_P) {
+        	//qzmyHippoObject2.eat();
+        } else if (keyCode == KeyEvent.VK_SLASH) {
+        	myHippoObject3.eat();
         }
     }
     
