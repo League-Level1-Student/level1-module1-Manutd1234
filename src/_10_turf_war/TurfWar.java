@@ -22,7 +22,15 @@ public class TurfWar extends PApplet {
         int downKey;
         int rightKey;
 public Player() {
-	
+this.x = x;
+this.y = y;
+this.speed = speed;
+this.playerSize = playerSize;
+this.playerColor = playerColor;
+this.upKey = upKey;
+this.leftKey = leftKey;
+this.downKey = downKey;
+this.rightKey = rightKey;
 }
         /*
          * The member variables below do not need to be initialized in the
@@ -36,10 +44,10 @@ public Player() {
 
         void drawPlayer() {
             /*
-             * 2. Draw a rectangle to represent the the Player using its color,
+             * 2. Draw a rectangle to represent the Player using its color,
              * coordinates and size.
              */
-            
+           
         
         }
 
@@ -112,7 +120,8 @@ public Player() {
      * 4. Declare two variables of the Player class called player1 and player2.
      * Do not initialize them yet.
      */
-    
+    int player1;
+    int player2;
     
 
     // Do not change these variables
@@ -163,8 +172,11 @@ background(50,50,50);
          * not select black, white or the color you used for your background as it
          * will give that player an unfair advantage.
          */
-
-        
+this.player1 = player1;
+this.player2 = player2;
+        if (millis() >= endOfGame && !gameOver) {
+            gameOver = true;
+        }  
     }
 
     /*
@@ -173,9 +185,9 @@ background(50,50,50);
      */
 
 //    public void isGameOver() {
-//        if (millis() >= endOfGame && !gameOver) {
-//            gameOver = true;
-//        }
+   // if (millis() >= endOfGame && !gameOver) {
+     //       gameOver = true;
+       // }
 //    }
 //
 //    public void endGame() {

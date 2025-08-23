@@ -136,7 +136,7 @@ public class HungryHungryHippos implements GameScene, GameControlScene {
         } else if (keyCode == KeyEvent.VK_Z) {
         	myHippoObject1.eat();
         } else if (keyCode == KeyEvent.VK_P) {
-        	//qzmyHippoObject2.eat();
+        	myHippoObject2.eat();
         } else if (keyCode == KeyEvent.VK_SLASH) {
         	myHippoObject3.eat();
         }
